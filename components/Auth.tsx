@@ -12,6 +12,7 @@ export function Auth({ children }: { children: React.ReactNode }) {
   return (
     <View {...theme.containerProps()} color="font.primary">
       <Authenticator
+        socialProviders={["google"]}
         services={{
           async validateCustomSignUp(formData) {
             const username = formData["preferred_username"];
