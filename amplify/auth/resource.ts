@@ -21,8 +21,9 @@ export const auth = defineAuth({
     preSignUp,
   },
   userAttributes: {
-    //preferredUsername: { required: true },
+    preferredUsername: { required: true },
     email: { required: true },
   },
+  
   access: (allow) => [allow.resource(preSignUp).to(["listUsers"])],
 });
