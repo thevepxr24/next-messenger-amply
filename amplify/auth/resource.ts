@@ -9,12 +9,12 @@ export const auth = defineAuth({
   loginWith: {
     email: true,
     externalProviders: {
-     /* google: {
+      google: {
         clientId: secret("GOOGLE_CLIENT_ID"),
         clientSecret: secret("GOOGLE_CLIENT_SECRET"),
-      },*/
-      callbackUrls: ["http://localhost:5173/","https://6122ca79e5d06d7e3769.auth.us-east-1.amazoncognito.com", "http://localhost:3000/",],
-      logoutUrls: ["http://localhost:5173/","https://6122ca79e5d06d7e3769.auth.us-east-1.amazoncognito.com", "http://localhost:3000/",],
+      },
+      callbackUrls: ["http://localhost:5173/","https://main.dsvbee0ocwmrn.amplifyapp.com/", "http://localhost:3000/",],
+      logoutUrls: ["http://localhost:5173/","https://main.dsvbee0ocwmrn.amplifyapp.com/", "http://localhost:3000/",],
     }, 
   },
   triggers: {
