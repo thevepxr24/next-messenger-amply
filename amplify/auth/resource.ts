@@ -1,5 +1,4 @@
 import { defineAuth,secret } from "@aws-amplify/backend";
-import { preSignUp } from "./pre-signup/resource";
 
 /**
  * Define and configure your auth resource
@@ -17,13 +16,7 @@ export const auth = defineAuth({
       logoutUrls: ["http://localhost:5173/","https://main.dsvbee0ocwmrn.amplifyapp.com/", "http://localhost:3000/",],
     }, 
   },
-  triggers: {
-    preSignUp,
-  },
   userAttributes: {
-    preferredUsername: { required: true },
     email: { required: true },
   },
-  
-  access: (allow) => [allow.resource(preSignUp).to(["listUsers"])],
 });
